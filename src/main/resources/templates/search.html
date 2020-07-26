@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<link rel= "stylesheet" type = "text/css" media = "all"
+href  = "../static/css/style.css"
+th:href="@{/css/style.css}">
+
+</head>
+<body>
+<div id="dogs"></div>
+ <h1>Entrants Search</h1>
+	 
+	 <div class="registrationbox">
+	  
+	  <form action="/searchResults" method="get">
+	  <p style="color: red; font-size: 12px;">*Search entrants with one or options*</p><br>
+	  	
+	  	<label for="number">Number</label>
+	    <input type="text" id="number" name="number">
+	  	<br><br>
+	    <label for="name">Dog name:</label>
+	    <input type="text" id="dogname" name="dogname">
+		<br><br>
+	    <label for="owner">Owner name:</label>
+	    <input type="text" id="ownername" name="ownername">
+		<br><br>
+	    <label for="breed">Breed:</label>
+	    <input type="text" id="breed" name="breed">
+	    <br><br>
+	    <label for="group">Group:</label><select name="group">
+	      <option></option>
+		  <option>Group 1: Sporting Dogs</option>
+		  <option>Group 2: Hounds</option>
+		  <option>Group 3: Working Dogs</option>
+		  <option>Group 4: Terriers</option>
+		  <option>Group 5: Toys</option>
+		  <option>Group 6: Non-sporting Dogs</option>
+		  <option>Group 7: Herding</option>
+		</select>
+		<br><br>
+	    <input type="submit" value="Search">
+		<br>
+		<br>
+	   <center> <a href="/AddDogs" id="view" style="text-decoration: none;">Go Back</a></center>
+	</form>
+</div>
+
+
+
+</body>
+</html>

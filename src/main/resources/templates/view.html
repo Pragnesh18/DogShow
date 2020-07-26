@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<link rel= "stylesheet" type = "text/css" media = "all"
+href  = "../static/css/view.css"
+th:href="@{/css/view.css}">
+
+</head>
+<body>
+
+<div id="dogs"></div>
+<h1 align="center">List of Dogs:</h1>
+   <table id="table", align="center" border = 1>
+   <tr> 
+          <th><b>Number</b></th> 
+          <th><b>Name</b></th> 
+          <th><b>Owner</b></th> 
+          <th><b>Breed</b></th> 
+          <th><b>Group</b></th>
+          <th><b>Gender</b></th>
+          <th><b>Class</b></th>
+         </tr> 
+   
+   <tr th:each="dog : ${dogs}">
+     <td th:text="${dog.Number}"></td>
+     <td th:text="${dog.Dogname}"></td>
+     <td th:text="${dog.Ownername}"></td>
+     <td th:text="${dog.Breed}"></td>
+     <td th:text="${dog.Group}"></td>
+     <td th:text="${dog.Gender}"></td>
+     <td th:text="${dog.Dogclass}"></td>
+</tr>
+</table>
+<br>
+<center><a href="/AddDogs" id="view" style="text-decoration: none;">Go Back</a></center>
+<br>
+
+</body>
+</html>

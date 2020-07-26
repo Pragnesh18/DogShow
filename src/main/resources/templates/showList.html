@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<link rel= "stylesheet" type = "text/css" media = "all"
+href  = "../static/css/style.css"
+th:href="@{/css/style.css}">
+
+</head>
+<body>
+
+
+	 <h1>Show List:</h1>
+	 <div>
+     <table class="w3-table w3-bordered">
+		
+
+        <thead>
+          <tr> 
+	          <th colspan="6"><b>Group 1: Sporting Dogs</b></th>
+       	  </tr>
+       	  </thead>
+       	         	  
+       	  <tbody>
+       	  
+       	     <tr th:each="one : ${sl}">
+     <td th:text="${one.getBreedCount()}"></td>
+     <td th:text="${one.getBreed())}"></td>
+     <td th:text="${one.getMaleCount()}"></td>
+     <td th:text="${one.getFemaleCount()}"></td>
+     <td th:text="${one.getFemaleSpecialCount()}"></td>
+
+
+</tr>
+           
+            </tbody>
+        </table>
+        <br>
+        <br>
+        <table class="w3-table w3-bordered">
+		
+
+       <thead>
+          <tr> 
+	          <th colspan="6"><b>Group 2: Hounds</b></th>
+       	  </tr>
+       	  </thead>
+       	
+       	     <tr th:each="two : ${sl}">
+     <td th:text="${two.getBreedCount()}"></td>
+     <td th:text="${two.getBreed())}"></td>
+     <td th:text="${two.getMaleCount()}"></td>
+     <td th:text="${two.getFemaleCount()}"></td>
+     <td th:text="${two.getFemaleSpecialCount()}"></td>
+
+    
+</tr>
+            </tbody>
+        </table>
+        <br>
+        <br>
+        <table class="w3-table w3-bordered">
+		
+
+         <thead>
+          <tr> 
+	          <th colspan="6"><b>Group 3: Working Dogs</b></th>
+       	  </tr>
+       	 	
+       	  <tbody>
+            <tr th:each="three : ${sl}">
+     <td th:text="${three.getBreedCount()}"></td>
+     <td th:text="${three.getBreed())}"></td>
+     <td th:text="${three.getMaleCount()}"></td>
+     <td th:text="${three.getFemaleCount()}"></td>
+     <td th:text="${three.getFemaleSpecialCount()}"></td>
+
+
+</tr>
+            </tbody>
+        </table>
+        <br>
+        <br>
+        <table class="w3-table w3-bordered">
+		
+
+       <thead>
+          <tr> 
+	          <th colspan="6"><b>Group 4: Terriers</b></th>
+       	  </tr>
+       	  </thead>
+       	   <tr th:each="four : ${sl}">
+     <td th:text="${four.getBreedCount()}"></td>
+     <td th:text="${four.getBreed())}"></td>
+     <td th:text="${four.getMaleCount()}"></td>
+     <td th:text="${four.getFemaleCount()}"></td>
+     <td th:text="${four.getFemaleSpecialCount()}"></td>
+
+
+</tr>
+            </tbody>
+        </table>
+        <br>
+        <br>
+
+        <table class="w3-table w3-bordered">   
+          <thead>
+          <tr> 
+	          <th colspan="6"><b>Group 5: Toys</b></th>
+       	  </tr>
+       	   <tr th:each="five : ${sl}">
+     <td th:text="${five.getBreedCount()}"></td>
+     <td th:text="${five.getBreed())}"></td>
+     <td th:text="${five.getMaleCount()}"></td>
+     <td th:text="${five.getFemaleCount()}"></td>
+     <td th:text="${five.getFemaleSpecialCount()}"></td>
+
+
+</tr>
+            </tbody>
+        </table>
+        <br>
+        <br>
+        <table class="w3-table w3-bordered">
+             
+         <thead>
+          <tr> 
+	          <th colspan="6"><b>Group 6: Non-sporting Dogs</b></th>
+       	  </tr>
+       	  </thead>
+        <tr th:each="six : ${sl}">
+     <td th:text="${six.getBreedCount()}"></td>
+     <td th:text="${six.getBreed())}"></td>
+     <td th:text="${six.getMaleCount()}"></td>
+     <td th:text="${six.getFemaleCount()}"></td>
+     <td th:text="${six.getFemaleSpecialCount()}"></td>
+
+</tr>
+        </table>
+        <br>
+        <br>
+        <table class="w3-table w3-bordered">
+		         
+          <thead>
+          <tr> 
+	          <th colspan="6"><b>Group 7: Herding</b></th>
+       	  </tr>
+       <tr th:each="seven : ${sl}">
+     <td th:text="${seven.getBreedCount()}"></td>
+     <td th:text="${seven.getBreed())}"></td>
+     <td th:text="${seven.getMaleCount()}"></td>
+     <td th:text="${seven.getFemaleCount()}"></td>
+     <td th:text="${seven.getFemaleSpecialCount()}"></td>
+
+
+</tr>
+        </table>
+        <br>
+        <a href="/AddDogs" id="view" style="text-decoration: none;">Go Back</a>
+        </div>
+
+
+</body>
+</html>

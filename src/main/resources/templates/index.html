@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<link rel= "stylesheet" type = "text/css" media = "all"
+href  = "../static/css/style.css"
+th:href="@{/css/style.css}">
+
+</head>
+<body>
+<h1>DOG SHOW</h1>
+
+	<div id="dogs"></div>
+	<br>
+	
+	<div class="registrationbox">
+	  <h1>Register Your Dog</h1>
+	  <form action="/AddDogs" method="get">
+	  	
+	    <label for="name">Dog name:</label>
+	    <input type="text" id="dogname" name="dogname" required>
+	    <br><br>
+	
+	    <label for="owner">Owner name:</label>
+	    <input type="text" id="ownername" name="ownername" required>
+	    <br><br>
+	
+	    <label for="breed">Breed:</label>
+	    <input type="text" id="breed" name="breed" required>
+	    <br><br>
+	    
+	    <label for="group">Group:</label><select name="group" required>
+		  <option>Group 1: Sporting Dogs</option>
+		  <option>Group 2: Hounds</option>
+		  <option>Group 3: Working Dogs</option>
+		  <option>Group 4: Terriers</option>
+		  <option>Group 5: Toys</option>
+		  <option>Group 6: Non-sporting Dogs</option>
+		  <option>Group 7: Herding</option>
+		</select>
+		<br><br>
+	 
+	   	<label for="gender">Gender:</label><select name="gender" required>
+		  <option>Male</option>
+		  <option>Female</option>
+		</select>
+		<br><br>
+	    
+	    <label for="dogclass">Class or Specialty:</label><select name="dogclass" required>
+		  <option>Class Dog</option>
+		  <option>Specialty Dog</option>
+		</select>
+		<br><br>
+	  	
+	    <input type="submit" value="Submit" onclick="alert('Your pet has been entered into the competition!')">
+		<br><br>
+		
+	    <a href="/GetDogs" id="view" style="float: left; text-decoration: none;">View Entrants of Dog Show</a>
+	    
+	    <a href="/Search" id="view" style="float: right; text-decoration: none;">Search Entrants in Dog Show</a>
+	    <br>
+	    <br>
+	    <br>
+	  </form>
+	</div>
+
+	<form action="/DummyDogs" method="get">
+	<input type="submit" value="Generate 100 Random Dogs"  style="width: 530px;  display: block; margin-left: auto; margin-right: auto;" onclick="alert('100 Dummy records has been generated into the competition!') ">
+	</form>
+	
+	<form action="/showList" method="get">
+	<input type="submit" value="Show List" style=" width: 530px;  display: block; margin-left: auto; margin-right: auto; ">
+	</form>
+	
+</body>
+</html>
